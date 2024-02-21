@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Debts</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <body>
+    <select id="ass">
+      <option value="add">add</option>
+      <option value="sub">subtract</option>
+    </select>
+    <input type="text" id="in" placeholder="name,money" />
+    <input type="button" value="submit" id="btn" />
 
-<body>
-  <input type="text" id="in" placeholder="name,money" onchange="addPerson()" />
-  <input type="button" value="submit" id="btn" onclick="addPerson()" />
-  
-  <script src="script.js"></script>
-</body>
+    <div id="sec"></div>
 
+    <script src="script.js"></script>
+  </body>
 </html>
