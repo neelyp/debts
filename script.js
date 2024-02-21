@@ -1,7 +1,7 @@
-const i = document.querySelector('#in');
-const btn = document.querySelector('#btn');
-const sec = document.querySelector('#sec');
-const ass = document.querySelector('#ass');
+const i = document.querySelector('#in'); // input form
+const btn = document.querySelector('#btn'); // button to submit input
+const sec = document.querySelector('#sec'); // section for names and amounts
+const ass = document.querySelector('#ass'); // add or subtract dropdown
 
 var names = {};
 
