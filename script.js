@@ -5,6 +5,16 @@ const ass = document.querySelector('#ass'); // add or subtract dropdown
 
 var names = {};
 
+const save = () => localStorage.setItem('names', JSON.stringify(names));
+
+window.onload = () => {
+  if ('names' in localStorage) {
+    names = JSON.parse(localStorage.getItem('names'));
+    console.log(names);
+    display();
+  }
+};
+
 const display = () => {
   // iterate through keys and make paragraph tag showing name and money owed
   sec.innerHTML = '';
@@ -27,9 +37,11 @@ const addPerson = () => {
   if (!(name in names)) {
     if (!(money == null)) {
       names = { ...names, [name]: money };
+      save();
     }
   } else {
     names[name] += money;
+    save();
   }
 
   display();
